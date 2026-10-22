@@ -1,0 +1,9 @@
+com\simplilearn\pizzahutdemo\pages\DealsPage.class
+com\simplilearn\pizzahutdemo\pages\PaymentPage.class
+com\simplilearn\pizzahutdemo\pages\SecurePage.class
+com\simplilearn\pizzahutdemo\pages\MeltsPage.class
+com\simplilearn\pizzahutdemo\pages\SidesPage.class
+com\simplilearn\pizzahutdemo\pages\PopupPage.class
+com\simplilearn\pizzahutdemo\Base\AbstractClass.class
+com\simplilearn\pizzahutdemo\pages\PizzaPage.class
+com\simplilearn\pizzahutdemo\pages\GiftCardPage.class

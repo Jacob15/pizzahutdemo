@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="126.367" tests="4" errors="0" skipped="1" failures="1">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Jacob.A\eclipse-workspace\pizzahutdemo\target\test-classes;C:\Users\Jacob.A\eclipse-workspace\pizzahutdemo\target\classes;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-java\4.49.0\selenium-java-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-api\4.49.0\selenium-api-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.49.0\selenium-chrome-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.49.0\selenium-chromium-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-json\4.49.0\selenium-json-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.49.0\selenium-manager-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-devtools-latest\4.49.0\selenium-devtools-latest-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v151\4.49.0\selenium-devtools-v151-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v152\4.49.0\selenium-devtools-v152-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v153\4.49.0\selenium-devtools-v153-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.49.0\selenium-edge-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.49.0\selenium-firefox-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-http\4.49.0\selenium-http-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.49.0\selenium-ie-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.49.0\selenium-remote-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\com\google\guava\guava\33.7.1-jre\guava-33.7.1-jre.jar;C:\Users\Jacob.A\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\Jacob.A\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Jacob.A\.m2\repository\com\google\errorprone\error_prone_annotations\2.50.0\error_prone_annotations-2.50.0.jar;C:\Users\Jacob.A\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-api\1.65.0\opentelemetry-api-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-context\1.65.0\opentelemetry-context-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-common\1.65.0\opentelemetry-common-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.65.0\opentelemetry-exporter-logging-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.65.0\opentelemetry-sdk-common-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.65.0\opentelemetry-sdk-extension-autoconfigure-spi-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.65.0\opentelemetry-sdk-extension-autoconfigure-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.65.0\opentelemetry-sdk-trace-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.65.0\opentelemetry-sdk-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.65.0\opentelemetry-sdk-metrics-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.65.0\opentelemetry-sdk-logs-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\net\bytebuddy\byte-buddy\1.18.13\byte-buddy-1.18.13.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-os\4.49.0\selenium-os-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.49.0\selenium-safari-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-support\4.49.0\selenium-support-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\commons-io\commons-io\2.22.0\commons-io-2.22.0.jar;C:\Users\Jacob.A\.m2\repository\com\aventstack\extentreports\5.1.2\extentreports-5.1.2.jar;C:\Users\Jacob.A\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Jacob.A\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Jacob.A\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Jacob.A\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\Jacob.A\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Jacob.A\.m2\repository\org\testng\testng\7.12.0\testng-7.12.0.jar;C:\Users\Jacob.A\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Jacob.A\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Jacob.A\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\Jacob.A\AppData\Local\Temp\surefire6885019427813775545\surefirebooter3539397983961963943.jar C:\Users\Jacob.A\AppData\Local\Temp\surefire6885019427813775545 2026-10-21T19-25-24_565-jvmRun1 surefire5955636727311175571tmp surefire_013039898862794570310tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="chrome" value="true"/>
+    <property name="surefire.test.class.path" value="C:\Users\Jacob.A\eclipse-workspace\pizzahutdemo\target\test-classes;C:\Users\Jacob.A\eclipse-workspace\pizzahutdemo\target\classes;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-java\4.49.0\selenium-java-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-api\4.49.0\selenium-api-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.49.0\selenium-chrome-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.49.0\selenium-chromium-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-json\4.49.0\selenium-json-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.49.0\selenium-manager-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-devtools-latest\4.49.0\selenium-devtools-latest-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v151\4.49.0\selenium-devtools-v151-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v152\4.49.0\selenium-devtools-v152-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v153\4.49.0\selenium-devtools-v153-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.49.0\selenium-edge-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.49.0\selenium-firefox-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-http\4.49.0\selenium-http-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.49.0\selenium-ie-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.49.0\selenium-remote-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\com\google\guava\guava\33.7.1-jre\guava-33.7.1-jre.jar;C:\Users\Jacob.A\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\Jacob.A\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Jacob.A\.m2\repository\com\google\errorprone\error_prone_annotations\2.50.0\error_prone_annotations-2.50.0.jar;C:\Users\Jacob.A\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-api\1.65.0\opentelemetry-api-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-context\1.65.0\opentelemetry-context-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-common\1.65.0\opentelemetry-common-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.65.0\opentelemetry-exporter-logging-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.65.0\opentelemetry-sdk-common-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.65.0\opentelemetry-sdk-extension-autoconfigure-spi-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.65.0\opentelemetry-sdk-extension-autoconfigure-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.65.0\opentelemetry-sdk-trace-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.65.0\opentelemetry-sdk-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.65.0\opentelemetry-sdk-metrics-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.65.0\opentelemetry-sdk-logs-1.65.0.jar;C:\Users\Jacob.A\.m2\repository\net\bytebuddy\byte-buddy\1.18.13\byte-buddy-1.18.13.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-os\4.49.0\selenium-os-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.49.0\selenium-safari-driver-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\org\seleniumhq\selenium\selenium-support\4.49.0\selenium-support-4.49.0.jar;C:\Users\Jacob.A\.m2\repository\commons-io\commons-io\2.22.0\commons-io-2.22.0.jar;C:\Users\Jacob.A\.m2\repository\com\aventstack\extentreports\5.1.2\extentreports-5.1.2.jar;C:\Users\Jacob.A\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Jacob.A\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Jacob.A\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Jacob.A\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\Jacob.A\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Jacob.A\.m2\repository\org\testng\testng\7.12.0\testng-7.12.0.jar;C:\Users\Jacob.A\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Jacob.A\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Jacob.A\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Jacob.A"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-25.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Jacob.A\eclipse-workspace\pizzahutdemo"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Jacob.A\AppData\Local\Temp\surefire6885019427813775545\surefirebooter3539397983961963943.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.2+10-LTS-69"/>
+    <property name="user.name" value="Jacob.A"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Jacob.A\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Jacob.A\AppData\Local\Temp\"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="C:\Users\Jacob.A\eclipse-workspace\pizzahutdemo"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/Jacob.A/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.10.v20260205-0638/jre/bin/server;C:/Users/Jacob.A/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.10.v20260205-0638/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-25.0.2\bin;C:\Program Files\Git\cmd;C:\Program Files\Maven\apache-maven-3.9.14\bin;C:\Users\Jacob.A\AppData\Local\nvm;C:\nvm4w\nodejs;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Jacob.A\.local\bin;C:\Users\Jacob.A\AppData\Local\Microsoft\WindowsApps;C:\Users\Jacob.A\AppData\Roaming\npm;C:\jacob\softwares\Microsoft VS Code\bin;C:\Users\Jacob.A\AppData\Local\nvm;C:\nvm4w\nodejs;C:\nvm4w\nodejs\node_modules\npm\bin;C:\Users\Jacob.A\OneDrive\Desktop;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.2+10-LTS-69"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testDealsaddedtext" classname="com.simplilearn.pizzahutdemo.Tests.DealsPageTest" time="7.027">
+    <system-out><![CDATA[Location suggestion is displayed: true
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Oct 21, 2026 7:25:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 155, returning the closest version; found: 153; Please update to a Selenium version that supports CDP version 155
+]]></system-err>
+  </testcase>
+  <testcase name="testDealsaddedtextBasket" classname="com.simplilearn.pizzahutdemo.Tests.DealsPageTest" time="0">
+    <skipped message="Expected condition failed: waiting for visibility of element found by By.xpath: (//button[@class=&apos;sc-AxheI bqJhFB&apos;])[1], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@class=&apos;sc-AxheI bqJhFB&apos;])[1]&quot;}.&#10;(tried for 15 seconds with 500 milliseconds interval)&#10;Build info: version: &apos;4.49.0&apos;, revision: &apos;bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Jacob.A\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60380}, goog:processID: 23228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60380/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6314c04b55139895a608802a2f6dfe49"/>
+    <system-out><![CDATA[Location suggestion is displayed: true
+Deals added notification is displayed.
+Deals added notification text: Rs. 125 Off on bill value above Rs.500
+]]></system-out>
+    <system-err><![CDATA[Oct 21, 2026 7:25:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 155, returning the closest version; found: 153; Please update to a Selenium version that supports CDP version 155
+]]></system-err>
+  </testcase>
+  <testcase name="testPizzaCheckoutApplyGiftCard" classname="com.simplilearn.pizzahutdemo.Tests.PizzasPageTest" time="5.788">
+    <system-out><![CDATA[Location suggestion is displayed: true
+Deals added notification is displayed.
+Deals added notification text: Rs. 125 Off on bill value above Rs.500
+Location suggestion is displayed: true
+Added Pizza is not present in cart
+Secure Checkout page is displayed
+Error while applying Gift card
+]]></system-out>
+    <system-err><![CDATA[Oct 21, 2026 7:26:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 155, returning the closest version; found: 153; Please update to a Selenium version that supports CDP version 155
+Oct 21, 2026 7:26:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 155, returning the closest version; found: 153; Please update to a Selenium version that supports CDP version 155
+]]></system-err>
+  </testcase>
+  <testcase name="testSidesOrderApplyCouponCode" classname="com.simplilearn.pizzahutdemo.Tests.SidesPageTest" time="31.998">
+    <failure message="Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //a[@data-synth=&apos;link--sides--side&apos;]//span[contains(text(),&apos;Sides&apos;)]&apos;&#10;(tried for 15 seconds with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@data-synth='link--sides--side']//span[contains(text(),'Sides')]'
+(tried for 15 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.simplilearn.pizzahutdemo.Base.AbstractClass.waitForVisibility(AbstractClass.java:85)
+	at com.simplilearn.pizzahutdemo.Base.AbstractClass.click(AbstractClass.java:75)
+	at com.simplilearn.pizzahutdemo.Base.AbstractClass.safeClick(AbstractClass.java:92)
+	at com.simplilearn.pizzahutdemo.pages.DealsPage.navigateToSidesPage(DealsPage.java:142)
+	at com.simplilearn.pizzahutdemo.Tests.SidesPageTest.testSidesOrderApplyCouponCode(SidesPageTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@data-synth='link--sides--side']//span[contains(text(),'Sides')]"}
+  (Session info: chrome=155.0.8059.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb29be0447932da516dd810754fce4f8, findElement {value=//a[@data-synth='link--sides--side']//span[contains(text(),'Sides')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Jacob.A\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55425}, goog:processID: 17208, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55425/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb29be0447932da516dd810754fce4f8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:411)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	... 35 more
+]]></failure>
+    <system-out><![CDATA[Location suggestion is displayed: true
+]]></system-out>
+    <system-err><![CDATA[Oct 21, 2026 7:26:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 155, returning the closest version; found: 153; Please update to a Selenium version that supports CDP version 155
+]]></system-err>
+  </testcase>
+</testsuite>
