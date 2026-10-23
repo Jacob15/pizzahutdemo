@@ -72,6 +72,7 @@ public class DealsPage extends AbstractClass {
 			return true;
 		} else {
 			System.out.println("Failed to navigate to Pizza page. Current URL: " + currentUrl);
+			System.out.println("Navigated");
 			return false;
 		}
 	}
