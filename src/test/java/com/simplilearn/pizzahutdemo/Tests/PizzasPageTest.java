@@ -98,13 +98,16 @@ public class PizzasPageTest extends BaseTest {
 	
 	}
 	@Test
-	public void testPizzaCheckoutCards() throws InterruptedException{
+	public void testPizzaCheckoutCards() throws InterruptedException, IOException{
 		PopupPage popupPage = new PopupPage(driver);
-		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
+		DataDriven data=new DataDriven();
+		ArrayList<String> dataArray=data.getData("testPizzaCheckoutCards", "Pizza");
+		System.out.println(dataArray);
+		DealsPage dealsPage = popupPage.navigateToDealsPage(dataArray.get(1));
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
 		
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ", "LARGE Hand Stretched Crust");
-	    PaymentPage paymentPage=securePage.placeYourOrder("jacob","8807318292", "a.jacob@gmail.com", "22 North street", "cards");
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(dataArray.get(2), dataArray.get(3));
+	    PaymentPage paymentPage=securePage.placeYourOrder(dataArray.get(4),dataArray.get(5), dataArray.get(6), dataArray.get(7), dataArray.get(8));
 	    Assert.assertEquals(paymentPage.cardsVerification(), "Add a new card");
 	    paymentPage.closePopup();
 	
