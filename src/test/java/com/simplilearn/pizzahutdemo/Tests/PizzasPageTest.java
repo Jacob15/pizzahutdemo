@@ -6,69 +6,94 @@ import com.simplilearn.pizzahutdemo.pages.GiftCardPage;
 import com.simplilearn.pizzahutdemo.pages.PaymentPage;
 import com.simplilearn.pizzahutdemo.pages.PopupPage;
 import com.simplilearn.pizzahutdemo.pages.SecurePage;
+import com.simplilearn.pizzahutdemo.utils.DataDriven;
 import com.simplilearn.pizzahutdemo.pages.PizzaPage;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PizzasPageTest extends BaseTest {
 	// Add your test methods here
+	//public DataDriven data;
 	
 	@Test
-	public void testPizzasPage() throws InterruptedException {
+	public void testPizzasPage() throws InterruptedException, IOException {
 		PopupPage popupPage = new PopupPage(driver);
-		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
+		DataDriven data=new DataDriven();
+		ArrayList<String> dataArray=data.getData("testPizzasPage", "Pizza");
+		System.out.println(dataArray);
+		
+		DealsPage dealsPage = popupPage.navigateToDealsPage(dataArray.get(1));
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-		Assert.assertEquals(pizzasPage.selectPizza(), "Mexican Mango Habanero");
+		Assert.assertEquals(pizzasPage.selectPizza(), dataArray.get(2));
 		
 		
 	}
 	@Test
-	public void testPizzaSelectionClose() throws InterruptedException{
+	public void testPizzaSelectionClose() throws InterruptedException, IOException{
 		PopupPage popupPage = new PopupPage(driver);
-		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
+		DataDriven data=new DataDriven();
+		ArrayList<String> dataArray=data.getData("testPizzaSelectionClose", "Pizza");
+		DealsPage dealsPage = popupPage.navigateToDealsPage(dataArray.get(1));
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
 		pizzasPage.closePizza();
 	}
 	@Test
-	public void testPizzaDropdownValueCheck() throws InterruptedException{
+	public void testPizzaDropdownValueCheck() throws InterruptedException, IOException{
 		PopupPage popupPage = new PopupPage(driver);
-		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
+		DataDriven data=new DataDriven();
+		ArrayList<String> dataArray=data.getData("testPizzaDropdownValueCheck", "Pizza");
+		DealsPage dealsPage = popupPage.navigateToDealsPage(dataArray.get(1));
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
 		Assert.assertTrue(pizzasPage.dropdownText());
 	}
 	@Test
-	public void testPizzaDropdownSelection() throws InterruptedException{
+	public void testPizzaDropdownSelection() throws InterruptedException, IOException{
 		PopupPage popupPage = new PopupPage(driver);
-		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
+		DataDriven data=new DataDriven();
+		ArrayList<String> dataArray=data.getData("testPizzaDropdownSelection", "Pizza");
+		System.out.println(dataArray);
+		DealsPage dealsPage = popupPage.navigateToDealsPage(dataArray.get(1));
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-		pizzasPage.dropdownSelection();
+		pizzasPage.dropdownSelection(dataArray.get(3));
 
 	}
 	@Test
-	public void testPizzaAddToCart() throws InterruptedException{
+	public void testPizzaAddToCart() throws InterruptedException, IOException{
 		PopupPage popupPage = new PopupPage(driver);
-		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
+		DataDriven data=new DataDriven();
+		ArrayList<String> dataArray=data.getData("testPizzaAddToCart", "Pizza");
+		System.out.println(dataArray);
+		DealsPage dealsPage = popupPage.navigateToDealsPage(dataArray.get(1));
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-		pizzasPage.cartCheckoutItem(" Four Pepper | Olive Garden ");
-		Assert.assertEquals(pizzasPage.cartCheckoutItem(" Four Pepper | Olive Garden "), "Personal Mexican Mango Habanero");
+		pizzasPage.cartCheckoutItem(dataArray.get(2),dataArray.get(3));
+		Assert.assertEquals(pizzasPage.cartCheckoutItem(dataArray.get(2),dataArray.get(3)), "Personal Mexican Mango Habanero");
 	}
 	@Test
-	public void testPizzaAddToCartCheckout() throws InterruptedException{
+	public void testPizzaAddToCartCheckout() throws InterruptedException, IOException{
 		PopupPage popupPage = new PopupPage(driver);
-		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
+		DataDriven data=new DataDriven();
+		ArrayList<String> dataArray=data.getData("testPizzaAddToCartCheckout", "Pizza");
+		System.out.println(dataArray);
+		DealsPage dealsPage = popupPage.navigateToDealsPage(dataArray.get(1));
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
 		//pizzasPage.cartCheckoutItem("Personal Mexican Mango Habanero");
-		Assert.assertTrue(pizzasPage.cartSecurePage(" Four Pepper | Olive Garden "));
+		Assert.assertTrue(pizzasPage.cartSecurePage(dataArray.get(2),dataArray.get(3)));
 	
 	}
 	@Test
-	public void testPizzaCheckoutUPI() throws InterruptedException{
+	public void testPizzaCheckoutUPI() throws InterruptedException, IOException{
 		PopupPage popupPage = new PopupPage(driver);
-		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
+		DataDriven data=new DataDriven();
+		ArrayList<String> dataArray=data.getData("testPizzaCheckoutUPI", "Pizza");
+		System.out.println(dataArray);
+		DealsPage dealsPage = popupPage.navigateToDealsPage(dataArray.get(1));
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ");
-	    PaymentPage paymentPage=securePage.placeYourOrder("jacob","8807318292", "a.jacob@gmail.com", "22 North street", "upi");
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(dataArray.get(2), dataArray.get(3));
+	    PaymentPage paymentPage=securePage.placeYourOrder(dataArray.get(4),dataArray.get(5), dataArray.get(6), dataArray.get(7), dataArray.get(8));
 	    Assert.assertEquals(paymentPage.upiVerification(), "UPI QR");
 	
 	}
@@ -77,7 +102,8 @@ public class PizzasPageTest extends BaseTest {
 		PopupPage popupPage = new PopupPage(driver);
 		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ");
+		
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ", "LARGE Hand Stretched Crust");
 	    PaymentPage paymentPage=securePage.placeYourOrder("jacob","8807318292", "a.jacob@gmail.com", "22 North street", "cards");
 	    Assert.assertEquals(paymentPage.cardsVerification(), "Add a new card");
 	    paymentPage.closePopup();
@@ -89,7 +115,7 @@ public class PizzasPageTest extends BaseTest {
 		PopupPage popupPage = new PopupPage(driver);
 		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ");
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ", "LARGE Hand Stretched Crust");
 	    PaymentPage paymentPage=securePage.placeYourOrder("jacob","8807318292", "a.jacob@gmail.com", "22 North street", "wallet");
 	    Assert.assertEquals(paymentPage.walletVerification(), "All Wallet Options");
 	    paymentPage.closePopup();
@@ -100,7 +126,7 @@ public class PizzasPageTest extends BaseTest {
 		PopupPage popupPage = new PopupPage(driver);
 		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ");
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ", "LARGE Hand Stretched Crust");
 	    PaymentPage paymentPage=securePage.placeYourOrder("jacob","8807318292", "a.jacob@gmail.com", "22 North street", "netbanking");
 	    Assert.assertEquals(paymentPage.netbankingVerification(), "Suggested Banks");
 	    paymentPage.closePopup();
@@ -111,7 +137,7 @@ public class PizzasPageTest extends BaseTest {
 		PopupPage popupPage = new PopupPage(driver);
 		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ");
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ", "LARGE Hand Stretched Crust");
 	    GiftCardPage giftCard=securePage.applyGiftCard();
 	    Assert.assertEquals(giftCard.applyGiftCard("123456789", "123456"), "Error applying Gift Card");
 	    
@@ -121,7 +147,7 @@ public class PizzasPageTest extends BaseTest {
 		PopupPage popupPage = new PopupPage(driver);
 		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ");
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ", "LARGE Hand Stretched Crust");
 	    GiftCardPage giftCard=securePage.applyGiftCard();
 	    giftCard.cancelGiftCard();
 		
@@ -131,7 +157,7 @@ public class PizzasPageTest extends BaseTest {
 		PopupPage popupPage = new PopupPage(driver);
 		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ");
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ", "LARGE Hand Stretched Crust");
 	    GiftCardPage giftCard=securePage.applyGiftCard();
 	    Assert.assertEquals(giftCard.applyCouponCode("ABC1234"), "Sorry, we don’t currently support that coupon code.");
 		
@@ -141,7 +167,7 @@ public class PizzasPageTest extends BaseTest {
 		PopupPage popupPage = new PopupPage(driver);
 		DealsPage dealsPage = popupPage.navigateToDealsPage("Kodungaiyur");
 		PizzaPage pizzasPage = dealsPage.navigateToPizzaPage();
-	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ");
+	    SecurePage securePage=pizzasPage.cartSecurePageUPI(" Four Pepper | Olive Garden ", "LARGE Hand Stretched Crust");
 	    GiftCardPage giftCard=securePage.applyGiftCard();
 	    giftCard.cancelCouponCode();
 		

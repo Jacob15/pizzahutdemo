@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.simplilearn.pizzahutdemo.Tests.SidesPageTest">
+      <class name="com.simplilearn.pizzahutdemo.Tests.PizzasPageTest">
         <methods>
           <include name="setup"/>
-          <include name="testSidesOrderWallet"/>
+          <include name="testPizzaAddToCart"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.simplilearn.pizzahutdemo.Tests.SidesPageTest -->
+      </class> <!-- com.simplilearn.pizzahutdemo.Tests.PizzasPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -30,6 +30,8 @@ public class PizzaPage extends AbstractClass {
 	WebElement planDropdown;
 	@FindBy(css="button[data-synth='button--mexican-mango-habanero-pan-personal--one-tap']")
 	WebElement addPizza;
+	@FindBy(css="button[data-synth='button--four-pepper-|-olive-garden-hand-stretched-crust-large-(12in)--one-tap']")
+	WebElement addPizza1;
 	@FindBy(css="div[data-synth='basket-item-type--pizza']")
 	WebElement cartAddPizza;
 	@FindBy(xpath="//span[text()='Checkout']")
@@ -77,12 +79,18 @@ public class PizzaPage extends AbstractClass {
         return hasPersonal && hasMedium;
         // Outputs: true
 	}
-	public void  dropdownSelection() {
-		selectDropdownValue(planDropdown, "LARGE Hand Stretched Crust" ) ;
+	public void  dropdownSelection(String pizzaType) {
+		selectDropdownValue(planDropdown, pizzaType ) ;
 	}
-	public String cartCheckoutItem(String Pizzaname) {
-		selectDropdownValue(planDropdown, "LARGE Hand Stretched Crust" ) ;
-		addPizza.click();
+	public String cartCheckoutItem(String Pizzaname,String pizzaType) {
+		selectDropdownValue(planDropdown, pizzaType ) ;
+		if(pizzaType.equals("Personal Pan")||pizzaType.equals( "Medium Pan")) {
+			addPizza.click();
+		}
+		else {
+			addPizza1.click();
+		}
+		
 		if(cartAddPizza.getText().equalsIgnoreCase(Pizzaname))
 		{
 			System.out.println("Added pizza is present in cart");
@@ -96,9 +104,15 @@ public class PizzaPage extends AbstractClass {
 		
 		
 	}
-	public  Boolean cartSecurePage(String Pizzaname) {
-		selectDropdownValue(planDropdown, "LARGE Hand Stretched Crust" ) ;
-		addPizza.click();
+	public  Boolean cartSecurePage(String Pizzaname, String pizzaType) {
+		selectDropdownValue(planDropdown, pizzaType) ;
+		if(pizzaType.equals("Personal Pan")||pizzaType.equals( "Medium Pan")) {
+			addPizza.click();
+		}
+		else {
+			addPizza1.click();
+		}
+		
 		if(cartAddPizza.getText().equalsIgnoreCase(Pizzaname))
 		{
 			System.out.println("Added pizza is present in cart");
@@ -126,9 +140,14 @@ public class PizzaPage extends AbstractClass {
 		
 		
 	}
-	public SecurePage cartSecurePageUPI(String Pizzaname) {
-		selectDropdownValue(planDropdown, "LARGE Hand Stretched Crust" ) ;
-		addPizza.click();
+	public SecurePage cartSecurePageUPI(String Pizzaname, String pizzaType) {
+		selectDropdownValue(planDropdown, pizzaType ) ;
+		if(pizzaType.equals("Personal Pan")||pizzaType.equals( "Medium Pan")) {
+			addPizza.click();
+		}
+		else {
+			addPizza1.click();
+		}
 		if(cartAddPizza.getText().equalsIgnoreCase(Pizzaname))
 		{
 			System.out.println("Added pizza is present in cart");
